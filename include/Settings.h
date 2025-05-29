@@ -1,13 +1,13 @@
 #pragma once
 
-class Settings : public ISingleton<Settings>
+class Settings : public REX::Singleton<Settings>
 {
 public:
 	struct Fixes
 	{
 		void Load(CSimpleIniA& a_ini, bool a_writeValues);
 
-		//members
+		// members
 		bool loadEDID{ true };
 	};
 

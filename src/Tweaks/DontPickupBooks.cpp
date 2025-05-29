@@ -50,8 +50,8 @@ namespace Tweaks::DontPickupBooks
 
 	void Install()
 	{
-		stl::write_vfunc<PickupObject>(RE::VTABLE::PlayerCharacter[38]);
+		stl::write_vfunc<PickupObject>(RE::VTABLE::PlayerCharacter[13]);
 
-		logger::info("\tInstalled DontPickupReadBooks");
+		REX::INFO("\tInstalled DontPickupReadBooks");
 	}
 }

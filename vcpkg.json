@@ -1,16 +1,18 @@
 {
   "name": "po3-tweaks-sfse",
-  "version-string": "1.2.2",
+  "version-string": "2.0.0",
   "description": "Collection of bug fixes and tweaks for Starfield",
   "homepage": "",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "dependencies": [
-    "boost-stl-interfaces",
     "clib-util",
-    "unordered-dense",
     "rsm-binary-io",
-    "spdlog",
+    {
+      "name": "spdlog",
+      "features": [ "wchar" ]
+    },
+    "unordered-dense",
     "xbyak"
   ],
-  "builtin-baseline": "76d153790caf0592fce8fc4484aa6db18c7d00d4"
+  "builtin-baseline": "7bf98dbcba23cd813e2dbe6319b6b0ed71652319"
 }

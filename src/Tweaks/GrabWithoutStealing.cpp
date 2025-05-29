@@ -5,7 +5,7 @@ namespace Tweaks::GrabWithoutStealing
 	// shortcircuit SendStealAlarm
 	struct GetOwnedNoCrime
 	{
-		static bool thunk([[maybe_unused]] std::uintptr_t a_extraDataList)
+		static bool thunk([[maybe_unused]] RE::ExtraDataList* a_extraDataList)
 		{
 			return true;
 		}
@@ -14,9 +14,9 @@ namespace Tweaks::GrabWithoutStealing
 
 	void Install()
 	{
-		const REL::Relocation<std::uintptr_t> target{ REL::ID(153767), 0x304 };  // PlayerCharacter::StartGrabObject
+		const REL::Relocation<std::uintptr_t> target{ REL::ID(102774), 0x3CB };  // PlayerCharacter::StartGrabObject DONE
 		stl::write_thunk_call<GetOwnedNoCrime>(target.address());
 
-		logger::info("\tInstalled GrabWithoutStealing");
+		REX::INFO("\tInstalled GrabWithoutStealing");
 	}
 }

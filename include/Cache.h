@@ -2,7 +2,7 @@
 
 namespace Cache
 {
-	class EditorID : public ISingleton<EditorID>
+	class EditorID : public REX::Singleton<EditorID>
 	{
 	public:
 		void CacheEditorID(const RE::TESForm* a_form, const char* a_editorID);

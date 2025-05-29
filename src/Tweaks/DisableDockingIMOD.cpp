@@ -23,9 +23,9 @@ namespace Tweaks::DisableDockingIMOD
 
 	void Install()
 	{
-		const REL::Relocation<std::uintptr_t> target{ REL::ID(120385), 0x16C };  // ShipActionCameraState::InitCameraPath ?
+		const REL::Relocation<std::uintptr_t> target{ REL::ID(74695), 0x261 };  // ShipActionCameraState::InitCameraPath ? DONE
 		stl::write_thunk_call<TriggerImageSpaceModifier>(target.address());
 
-		logger::info("\tInstalled DisableSpaceshipDockingIMOD");
+		REX::INFO("\tInstalled DisableSpaceshipDockingIMOD");
 	}
 }

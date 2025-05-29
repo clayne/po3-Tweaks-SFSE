@@ -5,7 +5,7 @@ namespace Fixes
 {
 	void Install()
 	{
-		logger::info("[FIXES]");
+		REX::INFO("[FIXES]");
 
 		const auto& fixes = Settings::GetSingleton()->GetFixes();
 

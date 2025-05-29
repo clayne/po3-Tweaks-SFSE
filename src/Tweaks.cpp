@@ -5,7 +5,7 @@ namespace Tweaks
 {
 	void Install()
 	{
-		logger::info("[TWEAKS]");
+		REX::INFO("[TWEAKS]");
 
 		const auto tweaks = Settings::GetSingleton()->GetTweaks();
 
